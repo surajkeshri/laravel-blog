@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CreateBlogController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/user/CreateBlog',[CreateBlogController::class,'index']);
+
+Route::get('/',[LoginController::class,'index']);
+Route::get('/singUp',[LoginController::class,'singUp']);
