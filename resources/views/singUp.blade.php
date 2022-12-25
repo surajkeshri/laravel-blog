@@ -9,25 +9,26 @@
 		<div class="card-text">
 			<!--
 			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
-			<form>
+			<form method="POST" action="{{ url('/singUp') }}">
+				@csrf
 				<!-- to error: add class "has-danger" -->
                 <div class="form-group">
 					<label for="name">Name</label>
-					<input type="text" class="form-control form-control-sm" id="name" aria-describedby="emailHelp">
+					<input type="text" name="name" class="form-control form-control-sm" id="name" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputEmail1">Email address</label>
-					<input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+					<input type="email"  name="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
 				</div>
 				<div class="form-group">
 					<label for="exampleInputPassword1">Password</label>
-					<a href="#" style="float:right;font-size:12px;">Forgot password?</a>
-					<input type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+					
+					<input type="password" name="password" class="form-control form-control-sm" id="exampleInputPassword1">
 				</div>
 				<button type="submit" class="btn btn-primary btn-block">Sign Up</button>
 				
 				<div class="sign-up">
-					Don't have an account? <a href="{{ url('/') }}">Sing Up</a>
+				 have an account? <a href="{{ url('/') }}">Singin</a>
 				</div>
 			</form>
 		</div>

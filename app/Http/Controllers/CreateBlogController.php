@@ -10,4 +10,9 @@ class CreateBlogController extends Controller
     {
       return view('createBlog');   
     }
+
+    public function dashboard()
+    {
+      echo session()->get('user_id');
+    }
 }

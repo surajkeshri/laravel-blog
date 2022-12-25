@@ -19,3 +19,6 @@ Route::get('/user/CreateBlog',[CreateBlogController::class,'index']);
 
 Route::get('/',[LoginController::class,'index']);
 Route::get('/singUp',[LoginController::class,'singUp']);
+Route::post('/singUp',[LoginController::class,'register']);
+Route::post('/login',[LoginController::class,'login']);
+Route::get('/dashboard',[CreateBlogController::class,'dashboard']);
