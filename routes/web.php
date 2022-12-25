@@ -21,4 +21,5 @@ Route::get('/',[LoginController::class,'index']);
 Route::get('/singUp',[LoginController::class,'singUp']);
 Route::post('/singUp',[LoginController::class,'register']);
 Route::post('/login',[LoginController::class,'login']);
-Route::get('/dashboard',[CreateBlogController::class,'dashboard']);
+Route::get('/dashboard',[CreateBlogController::class,'dashboard'])->middleware('check-login');
+Route::get('/logout',[LoginController::class,'logout']);

@@ -38,4 +38,9 @@ class LoginController extends Controller
             echo "wrongg user id password";
         }
     }
+    public function logout()
+    {
+        session()->flush();
+        return redirect('/');
+    }
 }
